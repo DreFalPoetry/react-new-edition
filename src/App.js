@@ -1,13 +1,9 @@
 import React from 'react';
-import { Button } from 'antd';
+import './css/common.less'
+import IRouter from './router';
 
 function App() {
-  return (
-    <div>
-      我是主页
-      <Button type="primary">sss</Button>
-    </div>
-  );
+  return <IRouter/>;
 }
 
 export default App;
