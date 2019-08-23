@@ -9,7 +9,7 @@ export default function IRouter(){
       <Route path="/" render={()=>(
         <BasicLayout>
           <Switch>
-            <Route path="/" component={Index}></Route>    
+            <Route path="/dashboard" component={Index}></Route>    
           </Switch>
         </BasicLayout>
       )}></Route>
