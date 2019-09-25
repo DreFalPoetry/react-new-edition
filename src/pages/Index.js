@@ -1,13 +1,6 @@
 import React,{useEffect} from 'react';
-import { ViewState } from '@devexpress/dx-react-scheduler';
 import axios  from 'axios'; 
-import { Grid, Table, TableHeaderRow } from '@devexpress/dx-react-grid-bootstrap3';
-import {
-  Scheduler,
-  MonthView,
-  Appointments,
-} from '@devexpress/dx-react-scheduler-material-ui';
-
+import {ReAreaCharts} from 'mini-chart-line'
 import {data} from './data';
 
 
@@ -20,6 +13,11 @@ export default class Index extends React.Component{
       currentDate: '2018-07-17',
     };
   }
+
+  componentDidMount(){
+    
+  }
+
   // useEffect(()=>{
   //   axios.get('http://192.168.31.180:8080/devices')
   //     .then(function (response) {
@@ -38,15 +36,14 @@ export default class Index extends React.Component{
     const { data, currentDate } = this.state;
     return (
       <div>
-       <Scheduler
-          data={data}
-        >
-          <ViewState
-            currentDate={currentDate}
-          />
-          <MonthView />
-          <Appointments />
-        </Scheduler>
+        <div id="sddd">sdddd</div>
+        <ReAreaCharts 
+          axis_x={['1s','10s','30s','1min']}
+          data={['10','20','30','40']} 
+          tooltip={true}
+          strokeColor={'red'}
+          fillColor={'blue'}
+        />
       </div>
     )
   }
